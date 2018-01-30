@@ -22,7 +22,6 @@
     dest: "{{ consul_config_dir }}/server.json"
     owner: root
     group: root
-  notify: reload consul service
 
 
 - name: Setup systemd service definition
@@ -31,12 +30,10 @@
     dest: /etc/systemd/system/consul.service
     owner: root
     group: root
-  notify: 
-    - reload systemctl daemon
-    - reload consul service
+  
 
 - name: Create consul service
   service:
     name: consul
     enabled: yes
-  notify: reload consul service
+  

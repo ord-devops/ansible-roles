@@ -6,3 +6,4 @@ required_packages:
   - bind-utils
   - tcpdump
   - tree
+  - python-pip
