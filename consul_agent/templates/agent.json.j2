@@ -1,9 +1,7 @@
 {
-  "bootstrap_expect": 3,
   "datacenter": "{{ aws_region }}",
   "data_dir": "{{ consul_data_dir }}",
   "log_level": "INFO",
-  "server": true,
   "retry_join": ["provider=aws tag_key=role tag_value=consul_server region={{ aws_region }}"],
   "ui": true,
   "encrypt": "{{ consul_encryption_key }}",

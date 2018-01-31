@@ -14,4 +14,13 @@
     state: installed
 
 
+- name: set aws cli region
+  command: aws configure set region {{ aws_region }}
+  become: true
+  become_user: "{{ item }}"
+  with_items: 
+    - root
+    - ec2-user
+
+
 

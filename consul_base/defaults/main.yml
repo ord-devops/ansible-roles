@@ -1,5 +1,8 @@
 ---
 # defaults file for consul_base
 
+aws_region: eu-central-1
 consul_version: 1.0.3
 consul_install_dir: /opt/consul
+consul_config_dir: /etc/consul.d
+consul_data_dir: /var/lib/consul

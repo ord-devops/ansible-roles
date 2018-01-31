@@ -1,2 +1,10 @@
 ---
 # tasks file for consul_agent
+
+
+- name: update configuration file
+  template:
+    src: agent.json.j2
+    dest: "{{ consul_config_dir }}/agent.json"
+    owner: root
+    group: root
